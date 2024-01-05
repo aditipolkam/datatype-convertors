@@ -10,11 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Conventional changelog action
-        id: conventional-changelog
+        id: changelog
         uses: TriPSs/conventional-changelog-action@v3.7.1
         with:
-          github_token: ${{ secrets.PA_TOKEN }}
-          version_file: './package.json, ./package-lock.json'
+          github-token: ${{ secrets.PA_TOKEN }}
+          version-file: './package.json, ./package-lock.json'
       
       - name: Create Release
         uses: actions/create-release@v1
